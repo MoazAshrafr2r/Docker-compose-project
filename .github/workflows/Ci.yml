@@ -30,10 +30,10 @@ jobs:
         with:
           context: ./Backend
           push: true
-          tags: ghcr.io/${{github.actor}}/${{github.repository}}/backend:Latest
+          tags: ghcr.io/${{github.actor}}/Docker-compose-project/backend:Latest
       - name: build frontend image
         uses: docker/build-push-action@v6
         with:
           context: ./Frontend
           push: true
-          tags: ghcr.io/${{github.actor}}/${{github.repository}}/frontend:Latest
+          tags: ghcr.io/${{github.actor}}/Docker-compose-project/frontend:Latest
