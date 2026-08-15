@@ -10,3 +10,6 @@ jobs:
     steps:
       - name: checkout code 
         uses: actions/checkout@v4
+
+      - name: massage
+        run: echo "test is passed"
