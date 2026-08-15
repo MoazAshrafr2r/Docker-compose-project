@@ -11,5 +11,17 @@ jobs:
       - name: checkout code 
         uses: actions/checkout@v4
 
-      - name: massage
-        run: echo "test is passed"
+      - name: set up docker buildx
+        uses: actions/setup-docker@v4
+
+      - name: build backend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./backend
+          push: false
+          
+      - name: build frontend image
+        uses: docker/bulid-push-action@v6
+        with:
+          context: ./frontend
+          puush: false
