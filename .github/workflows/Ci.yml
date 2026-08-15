@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: set up docker buildx
-        uses: actions/setup-docker@v4
+        uses: docker/setup-buildx-action@v4
 
       - name: build backend image
         uses: docker/build-push-action@v6
