@@ -21,7 +21,7 @@ jobs:
           push: false
           
       - name: build frontend image
-        uses: docker/bulid-push-action@v6
+        uses: docker/build-push-action@v6
         with:
           context: ./frontend
-          puush: false
+          push: false
